@@ -5,21 +5,27 @@ document.addEventListener('DOMContentLoaded', function ()
 	$("#master").select();
 });
 
+var siteName="adsf";
+
 chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
 	function(tabs){
 		var urlString = tabs[0].url;
-		var siteName = getSite(getLocation(urlString).host);
+		siteName = getSite(getLocation(urlString).host);
+		alert("1" + siteName);
+		alert("2" + siteName);
 		chrome.storage.sync.get
 		( 	"favoriteColor",
 			function(result) {
 				siteName = result["favoriteColor"];
+				alert("3"+siteName);
 		});
-		alert(siteName);
-		$("#plaintext").prop("value",siteName);
+		alert("4"+siteName);
+		$("#plaintext").prop("value",siteName);										
 		}
 );
 
-
+//alert("surprise!");
+//$("#plaintext").prop("value","surprise");		
 
 
 function getLocation(href)

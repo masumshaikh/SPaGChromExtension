@@ -1,12 +1,11 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	
-	"name": "Recoverable Password Generator",
+	"name": "Simple Password Generator",
 	
-	"description": "Easy way to generate complex passwords which do
-		not need to be stored anywhere, yet are easily recoverable.",
+	"description": "Simple way to generate complex passwords which do not need to be stored anywhere, yet are easily recoverable.",
 	
-	"version": "1.4",
+	"version": "1.5",
 	
 	"permissions": [ "tabs", "storage" ],
 	
@@ -19,9 +18,10 @@
 	
 	"options_page": "options.html",
 	
-	"browser_action":
+	"action":
 	{
 		"default_icon": "icons/icon19.png",
 		"default_popup": "popup.html"
 	}
+	"content_security_policy": {}
 }
